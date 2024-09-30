@@ -19,10 +19,11 @@ async function fetchData() {
         const name = show.show.name;
         const summary = show.show.summary;
         const row = document.createElement('div')
+        row.classList.add('show-data')
         console.log(img);
 
 
-        row.innerHTML = `<div class="show-data"><img src=${img}><div class="show-info"><h1>${name}</h1>${summary}</div></div>`
+        row.innerHTML = `<img src=${img}><div class="show-info"><h1>${name}</h1>${summary}</div>`
 
         containerDiv.appendChild(row);
     });
